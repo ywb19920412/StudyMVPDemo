@@ -2,11 +2,14 @@ package com.study.mvp.demo.detail;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.study.mvp.demo.R;
 import com.study.mvp.demo.base.StaticValue;
+import com.study.mvp.demo.detail.modle.HistoryDetail;
 import com.study.mvp.demo.detail.modle.PostDetailInfo;
 import com.study.mvp.demo.detail.modle.PostDetailModelImpl;
 import com.study.mvp.demo.detail.present.PostDetailPresenter;
@@ -26,6 +29,8 @@ import butterknife.ButterKnife;
 public class DetailActivity extends BaseActivity implements DetailView{
     @BindView(R.id.text)
     TextView text;
+    @BindView(R.id.img_icon)
+    ImageView img_icon;
     private String id = "";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,7 +44,9 @@ public class DetailActivity extends BaseActivity implements DetailView{
 
     @Override
     public void updateListUI(PostDetailInfo postDetailInfo) {
-        text.setText(postDetailInfo.result.get(0).content);
+        HistoryDetail detail = postDetailInfo.result.get(0);
+        text.setText(detail.content);
+        Glide.with(this).load(detail.pic).error(R.mipmap.ic_launcher).into(img_icon);
     }
 
     @Override
