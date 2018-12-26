@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/item_picture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"
+        android:padding="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_picture"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1998年12月25日（戊寅年冬月初七）"
+            android:gravity="center_horizontal"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="红色高棉领导人乔森红色高棉领导人乔森潘和农谢投向柬政府潘和农谢投向柬政府"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1998年12月25日 (农历冬月初七)，红色高棉领导人乔森潘和农谢投向柬政府。"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

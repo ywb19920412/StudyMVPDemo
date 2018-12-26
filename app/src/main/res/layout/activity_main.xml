@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.study.mvp.demo.list.MainActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="历史上的今天查询"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/edit_month"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="请输入月份"
+            android:inputType="number"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#eeeeee" />
+        <EditText
+            android:id="@+id/edit_day"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="请输入日期"
+            android:inputType="number"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee" />
+    <TextView
+        android:id="@+id/tv_query"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="查询"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="16sp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
